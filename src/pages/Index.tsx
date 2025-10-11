@@ -224,13 +224,13 @@ const Index = () => {
       {/* Fixed Mobile Footer */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-card border-t shadow-lg">
         <div className="grid grid-cols-2 gap-0">
-          <Button size="lg" className="rounded-none h-16 w-full" asChild>
+          <Button size="lg" className="rounded-none h-14 w-full" asChild>
             <a href="tel:904-236-9511">
               <Phone className="mr-2 h-5 w-5" />
               Call
             </a>
           </Button>
-          <Button size="lg" className="rounded-none h-16 w-full border-l bg-black text-white hover:bg-black/90" asChild>
+          <Button size="lg" className="rounded-none h-14 w-full border-l bg-black text-white hover:bg-black/90" asChild>
             <a href="mailto:Cowfordpainting@gmail.com">
               <Mail className="mr-2 h-5 w-5" />
               Email
