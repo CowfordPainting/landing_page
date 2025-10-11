@@ -210,30 +210,29 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t bg-card py-8">
-        <div className="container mx-auto px-4">
-          {/* Mobile Footer - Buttons */}
-          <div className="md:hidden grid grid-cols-2 gap-4 mb-6">
-            <Button size="lg" className="w-full" asChild>
-              <a href="tel:904-236-9511">
-                <Phone className="mr-2 h-5 w-5" />
-                Call
-              </a>
-            </Button>
-            <Button size="lg" variant="outline" className="w-full" asChild>
-              <a href="mailto:Cowfordpainting@gmail.com">
-                <Mail className="mr-2 h-5 w-5" />
-                Email
-              </a>
-            </Button>
-          </div>
-          
-          {/* Desktop Footer - Text */}
-          <div className="text-center text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} Cowford Painting. All rights reserved.</p>
-            <p className="mt-2">Serving Jacksonville, FL and surrounding areas</p>
-          </div>
+      {/* Fixed Mobile Footer */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-card border-t shadow-lg">
+        <div className="grid grid-cols-2 gap-0">
+          <Button size="lg" className="rounded-none h-16 w-full" asChild>
+            <a href="tel:904-236-9511">
+              <Phone className="mr-2 h-5 w-5" />
+              Call
+            </a>
+          </Button>
+          <Button size="lg" variant="outline" className="rounded-none h-16 w-full border-l" asChild>
+            <a href="mailto:Cowfordpainting@gmail.com">
+              <Mail className="mr-2 h-5 w-5" />
+              Email
+            </a>
+          </Button>
+        </div>
+      </div>
+
+      {/* Desktop Footer */}
+      <footer className="hidden md:block border-t bg-card py-8">
+        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Cowford Painting. All rights reserved.</p>
+          <p className="mt-2">Serving Jacksonville, FL and surrounding areas</p>
         </div>
       </footer>
     </div>
