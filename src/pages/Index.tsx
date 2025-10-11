@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Phone, Mail, CheckCircle2, Paintbrush, Home, Wrench } from "lucide-react";
+import { MobileServicesSwiper } from "@/components/MobileServicesSwiper";
 import cowfordLogo from "@/assets/cowford-logo.svg";
 import interiorPainting from "@/assets/interior-painting.jpg";
 import exteriorPainting from "@/assets/exterior-painting.jpg";
@@ -102,7 +103,17 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-[350px,1fr] gap-6 max-w-6xl mx-auto">
+          {/* Mobile Swiper */}
+          <div className="lg:hidden">
+            <MobileServicesSwiper 
+              services={services}
+              selectedService={selectedService}
+              onServiceChange={setSelectedService}
+            />
+          </div>
+
+          {/* Desktop View */}
+          <div className="hidden lg:grid lg:grid-cols-[350px,1fr] gap-6 max-w-6xl mx-auto">
             {/* Service List - Left Side */}
             <div className="space-y-3">
               {services.map((service) => (
