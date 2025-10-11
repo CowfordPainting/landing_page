@@ -80,17 +80,17 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Services</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl text-white">Our Services</h2>
+            <p className="text-lg text-white max-w-2xl mx-auto">
               From meticulous prep work to clean, professional finishes—we ensure every detail reflects our dedication to quality.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
-              <Card 
+              <Card
                 key={index} 
                 className="p-6 transition-all hover:shadow-lg hover:-translate-y-1 border-border bg-card"
               >
