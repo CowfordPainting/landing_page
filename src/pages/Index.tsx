@@ -71,7 +71,7 @@ const Index = () => {
             <p className="mb-4 text-xl md:text-2xl font-semibold text-primary animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
               Local. Reliable. Exceptional.
             </p>
-            <p className="mb-8 max-w-2xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
+            <p className="mb-8 max-w-2xl text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
               Bringing color, craftsmanship, and care to every project across Jacksonville, FL, and surrounding areas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700">
