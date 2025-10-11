@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Phone, Mail, CheckCircle2, Paintbrush, Home, Wrench } from "lucide-react";
 import { MobileServicesSwiper } from "@/components/MobileServicesSwiper";
+import { StickyHeader } from "@/components/StickyHeader";
 import cowfordLogo from "@/assets/cowford-logo.svg";
 import interiorPainting from "@/assets/interior-painting.jpg";
 import exteriorPainting from "@/assets/exterior-painting.jpg";
@@ -56,6 +57,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <StickyHeader />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/30 to-background min-h-screen md:min-h-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(2,145,159,0.1),transparent_50%)]" />
