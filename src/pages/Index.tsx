@@ -219,7 +219,7 @@ const Index = () => {
               Call
             </a>
           </Button>
-          <Button size="lg" variant="outline" className="rounded-none h-16 w-full border-l" asChild>
+          <Button size="lg" className="rounded-none h-16 w-full border-l bg-black text-white hover:bg-black/90" asChild>
             <a href="mailto:Cowfordpainting@gmail.com">
               <Mail className="mr-2 h-5 w-5" />
               Email
