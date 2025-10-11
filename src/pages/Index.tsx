@@ -1,36 +1,49 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Phone, Mail, CheckCircle2, Paintbrush, Home, Wrench } from "lucide-react";
 import cowfordLogo from "@/assets/cowford-logo.svg";
+import interiorPainting from "@/assets/interior-painting.jpg";
+import exteriorPainting from "@/assets/exterior-painting.jpg";
+import cabinetRefinishing from "@/assets/cabinet-refinishing.jpg";
+import woodStaining from "@/assets/wood-staining.jpg";
+import drywallRepair from "@/assets/drywall-repair.jpg";
 
 const Index = () => {
   const services = [
     {
-      icon: Home,
+      id: 1,
       title: "Interior Painting",
-      description: "Transform your living spaces with expertly applied color and flawless finishes."
+      description: "Transform your living spaces with expertly applied color and flawless finishes. We bring precision and care to every room, ensuring a perfect result that reflects your personal style.",
+      image: interiorPainting
     },
     {
-      icon: Paintbrush,
+      id: 2,
       title: "Exterior Painting",
-      description: "Protect and beautify your home's exterior with weather-resistant, professional painting."
+      description: "Protect and beautify your home's exterior with weather-resistant, professional painting. Our expert team uses premium materials to ensure lasting beauty and protection against the elements.",
+      image: exteriorPainting
     },
     {
-      icon: Wrench,
+      id: 3,
       title: "Cabinet Refinishing",
-      description: "Breathe new life into your kitchen and bathrooms with custom cabinet refinishing."
+      description: "Breathe new life into your kitchen and bathrooms with custom cabinet refinishing. We transform dated cabinets into stunning focal points with meticulous preparation and expert finishing.",
+      image: cabinetRefinishing
     },
     {
-      icon: CheckCircle2,
+      id: 4,
       title: "Wood Staining",
-      description: "Enhance the natural beauty of wood with professional staining services."
+      description: "Enhance the natural beauty of wood with professional staining services. From decks to fences to interior trim, we bring out the rich character of wood with expert application.",
+      image: woodStaining
     },
     {
-      icon: Wrench,
+      id: 5,
       title: "Drywall Repair",
-      description: "Seamless repairs that prepare your walls for a perfect paint finish."
+      description: "Seamless repairs that prepare your walls for a perfect paint finish. We fix cracks, holes, and imperfections to create a smooth, flawless surface ready for painting.",
+      image: drywallRepair
     }
   ];
+
+  const [selectedService, setSelectedService] = useState(services[0]);
 
   const whyChooseUs = [
     "Locally owned and operated in Jacksonville, FL",
@@ -88,17 +101,41 @@ const Index = () => {
               From meticulous prep work to clean, professional finishes—we ensure every detail reflects our dedication to quality.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, index) => (
-              <Card
-                key={index} 
-                className="p-6 transition-all hover:shadow-lg hover:-translate-y-1 border-border bg-card"
-              >
-                <service.icon className="mb-4 h-12 w-12 text-primary" />
-                <h3 className="mb-2 text-xl font-semibold">{service.title}</h3>
-                <p className="text-muted-foreground">{service.description}</p>
-              </Card>
-            ))}
+          
+          <div className="grid lg:grid-cols-[350px,1fr] gap-6 max-w-6xl mx-auto">
+            {/* Service List - Left Side */}
+            <div className="space-y-3">
+              {services.map((service) => (
+                <button
+                  key={service.id}
+                  onClick={() => setSelectedService(service)}
+                  className={`w-full text-left px-6 py-4 rounded-lg transition-all ${
+                    selectedService.id === service.id
+                      ? 'bg-primary text-primary-foreground shadow-lg'
+                      : 'bg-white/10 text-white hover:bg-white/20'
+                  }`}
+                >
+                  <h3 className="font-semibold text-lg">{service.title}</h3>
+                </button>
+              ))}
+            </div>
+
+            {/* Service Detail - Right Side */}
+            <Card className="bg-white p-8 overflow-hidden">
+              <div className="space-y-6">
+                <img 
+                  src={selectedService.image} 
+                  alt={selectedService.title}
+                  className="w-full h-64 object-cover rounded-lg"
+                />
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 text-foreground">{selectedService.title}</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    {selectedService.description}
+                  </p>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
