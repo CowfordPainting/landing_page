@@ -75,7 +75,7 @@ const Index = () => {
             <p className="mb-8 max-w-4xl text-base md:text-lg font-semibold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
               Bringing color, craftsmanship, and care to every project across Jacksonville, FL, and surrounding areas.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700">
+            <div className="hidden md:flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700">
               <Button size="lg" className="text-lg" asChild>
                 <a href="tel:904-236-9511">
                   <Phone className="mr-2 h-5 w-5" />
