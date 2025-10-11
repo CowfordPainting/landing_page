@@ -57,10 +57,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/30 to-background">
+      <section className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/30 to-background min-h-screen md:min-h-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(2,145,159,0.1),transparent_50%)]" />
-        <div className="container relative mx-auto px-4 py-20 md:py-32">
-          <div className="flex flex-col items-center text-center">
+        <div className="container relative mx-auto px-4 py-20 md:py-32 min-h-screen md:min-h-0 flex items-center">
+          <div className="flex flex-col items-center text-center w-full">
             <img 
               src={cowfordLogo} 
               alt="Cowford Painting Logo" 
@@ -69,7 +69,7 @@ const Index = () => {
             <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
               Cowford Painting
             </h1>
-            <p className="mb-4 text-xl md:text-2xl font-semibold text-primary animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+            <p className="mb-12 md:mb-4 text-xl md:text-2xl font-semibold text-primary animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
               Local. Reliable. Exceptional.
             </p>
             <p className="mb-8 max-w-4xl text-base md:text-lg font-semibold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
