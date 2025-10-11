@@ -146,7 +146,7 @@ const Index = () => {
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div>
               <h2 className="mb-6 text-3xl font-bold md:text-4xl">Why Choose Cowford Painting?</h2>
-              <p className="mb-6 text-lg text-muted-foreground">
+              <p className="mb-6 text-lg text-primary">
                 We take pride in delivering flawless results with a personal touch. Our commitment to excellence goes far beyond the brush.
               </p>
               <ul className="space-y-4">
