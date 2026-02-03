@@ -14,7 +14,7 @@ export const WhyChooseUsCarousel = ({ items }: WhyChooseUsCarouselProps) => {
   );
 
   return (
-    <div className="overflow-hidden" ref={emblaRef}>
+    <div className="overflow-hidden w-full max-w-full" ref={emblaRef}>
       <div className="flex">
         {items.map((item, index) => (
           <div 

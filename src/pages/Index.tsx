@@ -155,10 +155,10 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-12 md:py-20">
+      <section className="py-12 md:py-20 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid gap-8 lg:gap-12 lg:grid-cols-2 items-center">
-            <div>
+          <div className="grid gap-8 lg:gap-12 lg:grid-cols-2 items-center overflow-hidden">
+            <div className="overflow-hidden min-w-0">
               <h2 className="mb-4 md:mb-6 text-2xl md:text-3xl font-bold lg:text-4xl">Why Choose Cowford Painting?</h2>
               <p className="mb-6 text-lg text-primary">
                 We take pride in delivering flawless results with a personal touch. Our commitment to excellence goes far beyond the brush.
