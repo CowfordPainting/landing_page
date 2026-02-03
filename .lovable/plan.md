@@ -1,43 +1,21 @@
 
 
-# Update Contact Information
+# Change Wood Staining Picture
 
 ## Summary
-Update the phone number from `904-236-9511` to `904-300-0365` and the email from `Cowfordpainting@gmail.com` to `quotes@cowfordpainting.com` across all locations in the website.
+Replace the current wood staining image with the newly uploaded image showing a modern kitchen/living space with beautiful wood flooring and wood accents.
 
 ## Changes Required
 
-### 1. src/pages/Index.tsx
-Update 10 instances of contact information:
+### 1. Copy the uploaded image to the project
+- Copy `user-uploads://image.png` to `src/assets/wood-staining.jpg` (replacing the existing file)
+- This maintains the same import path, so no code changes are needed in Index.tsx
 
-**Phone Number Updates (5 locations):**
-- Hero section: Phone button `href` and display text (lines 82-85)
-- Contact section: Phone link `href` and display text (lines 199-204)
-- Contact section: "Call Now" button `href` (line 216)
-- Mobile footer: "Call" button `href` (line 230)
-
-**Email Updates (5 locations):**
-- Hero section: "Get a Quote" button `href` - change to `mailto:quotes@cowfordpainting.com`
-- Contact section: Email link `href` and display text - change to `quotes@cowfordpainting.com`
-- Contact section: "Email Us" button `href` - change to `mailto:quotes@cowfordpainting.com`
-- Mobile footer: "Email" button `href` - change to `mailto:quotes@cowfordpainting.com`
-
-### 2. src/components/StickyHeader.tsx
-Update 2 instances of contact information:
-
-**Phone Number Updates (1 location):**
-- Sticky header: Phone button `href` and display text - change to `904-300-0365`
-
-**Email Updates (1 location):**
-- Sticky header: "Get a Quote" button `href` - change to `mailto:quotes@cowfordpainting.com`
+### 2. Files Affected
+- `src/assets/wood-staining.jpg` - Will be replaced with the new image
 
 ## Technical Notes
-- The `tel:` links handle phone call routing natively through the browser/device
-- The `mailto:` links handle email routing natively through the browser/device's default email client
-- No backend changes are needed since these are standard HTML link protocols
-- All changes are purely in the UI layer
-
-## Files to Modify
-1. `src/pages/Index.tsx` - 10 updates
-2. `src/components/StickyHeader.tsx` - 2 updates
+- The image is already imported in `src/pages/Index.tsx` as `import woodStaining from "@/assets/wood-staining.jpg"`
+- By replacing the file at the same path, no code changes are required
+- The new image shows wood flooring and wood cabinetry which is appropriate for the "Wood Staining" service
 
