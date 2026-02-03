@@ -155,22 +155,22 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-8 lg:gap-12 lg:grid-cols-2 items-center">
             <div>
-              <h2 className="mb-6 text-3xl font-bold md:text-4xl">Why Choose Cowford Painting?</h2>
+              <h2 className="mb-4 md:mb-6 text-2xl md:text-3xl font-bold lg:text-4xl">Why Choose Cowford Painting?</h2>
               <p className="mb-6 text-lg text-primary">
                 We take pride in delivering flawless results with a personal touch. Our commitment to excellence goes far beyond the brush.
               </p>
               <WhyChooseUsCarousel items={whyChooseUs} />
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 via-accent/20 to-primary/10 p-8 flex items-center justify-center">
+              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 via-accent/20 to-primary/10 p-6 md:p-8 flex items-center justify-center">
                 <div className="text-center">
-                  <Paintbrush className="mx-auto h-24 w-24 text-primary mb-6" />
-                  <p className="text-2xl font-semibold mb-2">Professional Excellence</p>
-                  <p className="text-muted-foreground">
+                  <Paintbrush className="mx-auto h-16 w-16 md:h-24 md:w-24 text-primary mb-4 md:mb-6" />
+                  <p className="text-xl md:text-2xl font-semibold mb-2">Professional Excellence</p>
+                  <p className="text-sm md:text-base text-muted-foreground">
                     Small-business integrity with professional-grade results
                   </p>
                 </div>
