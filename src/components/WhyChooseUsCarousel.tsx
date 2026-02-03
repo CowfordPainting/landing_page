@@ -19,10 +19,10 @@ export const WhyChooseUsCarousel = ({ items }: WhyChooseUsCarouselProps) => {
         {items.map((item, index) => (
           <div 
             key={index} 
-            className="flex-[0_0_100%] min-w-0 flex items-center gap-3 py-3"
+            className="flex-[0_0_100%] min-w-0 flex items-start gap-3 py-3 min-h-[72px]"
           >
-            <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0" />
-            <span className="text-foreground text-lg">{item}</span>
+            <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-primary flex-shrink-0 mt-0.5" />
+            <span className="text-foreground text-base md:text-lg leading-relaxed">{item}</span>
           </div>
         ))}
       </div>
