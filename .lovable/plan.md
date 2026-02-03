@@ -1,62 +1,48 @@
 
 
-# Fix Mobile Horizontal Scrolling Issues
+# Fix Mobile Horizontal Overflow in "Why Choose Cowford Painting" Section
 
 ## Summary
-Prevent horizontal scrolling on mobile by adding overflow controls and adjusting the "Why Choose Cowford Painting" section layout for narrow screens.
+The carousel and section layout are still causing horizontal scrolling on mobile. This plan adds targeted overflow controls and width constraints specifically to the "Why Choose Cowford Painting" section to ensure content stays within the mobile viewport.
 
-## Issues Identified
-1. **No global overflow control** - The page lacks `overflow-x: hidden` to prevent horizontal scrolling
-2. **Fixed aspect-square box** - The "Professional Excellence" box uses `aspect-square` which forces a square shape even on narrow screens, pushing content outside the viewport
-3. **Container padding on mobile** - The 2rem (32px) padding combined with the fixed aspect ratio causes overflow
+## Root Cause Analysis
+The Embla Carousel uses a flex container where all 5 slides are positioned side-by-side (totaling 500% width). Even with `overflow-hidden` on parent elements, the browser can still detect this wider content and enable horizontal scrolling if not properly contained at every level.
 
 ## Changes Required
 
-### 1. Add Global Overflow Control in `src/index.css`
-Add `overflow-x: hidden` to the body or html element to prevent any horizontal scrolling at the page level.
+### 1. Update `src/components/WhyChooseUsCarousel.tsx`
+Add explicit width constraints and additional overflow protection to the carousel wrapper.
 
-```css
-body {
-  @apply bg-background text-foreground overflow-x-hidden;
-}
-```
-
-### 2. Update `src/pages/Index.tsx` - "Why Choose Us" Section
-Make the Professional Excellence box responsive:
-- Remove `aspect-square` on mobile, keep it only for larger screens
-- Ensure the box content stays within bounds with proper padding
-- Add `overflow-hidden` to containers that might overflow
-
-**Current code (lines 168-178):**
+**Current:**
 ```tsx
-<div className="relative">
-  <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 via-accent/20 to-primary/10 p-6 md:p-8 flex items-center justify-center">
-    <div className="text-center">
-      <Paintbrush className="mx-auto h-16 w-16 md:h-24 md:w-24 text-primary mb-4 md:mb-6" />
-      <p className="text-xl md:text-2xl font-semibold mb-2">Professional Excellence</p>
-      <p className="text-sm md:text-base text-muted-foreground">
-        Small-business integrity with professional-grade results
-      </p>
-    </div>
-  </div>
-</div>
+<div className="overflow-hidden" ref={emblaRef}>
 ```
 
-**Proposed changes:**
-- Change `aspect-square` to only apply on larger screens: `md:aspect-square`
-- Add `py-12` for mobile to give vertical breathing room without forcing square
-- Add `overflow-hidden` to the container
-- Optionally, add `w-full` and `max-w-full` constraints
+**Updated:**
+```tsx
+<div className="overflow-hidden w-full max-w-full" ref={emblaRef}>
+```
 
-### 3. Add overflow-hidden to the main wrapper
-In the main page wrapper, add `overflow-x-hidden` to catch any remaining overflow issues.
+### 2. Update `src/pages/Index.tsx` - Why Choose Us Section
+Add overflow controls to the section and its inner containers to create multiple layers of protection.
+
+**Changes to the section (line 158):**
+- Add `overflow-hidden` to the section element itself
+
+**Changes to the grid container (line 160):**
+- Add `overflow-hidden` to prevent any grid items from overflowing
+
+**Changes to the first grid column (line 161):**
+- Add `overflow-hidden` and `min-w-0` to ensure the carousel text container properly constrains its width
+
+The `min-w-0` is critical because flex and grid children have an implicit `min-width: auto` which can prevent them from shrinking below their content size.
 
 ## Files to Modify
-1. `src/index.css` - Add overflow-x-hidden to body
-2. `src/pages/Index.tsx` - Fix the Professional Excellence box aspect ratio for mobile
+1. `src/components/WhyChooseUsCarousel.tsx` - Add width constraints to carousel wrapper
+2. `src/pages/Index.tsx` - Add overflow and width constraints to the Why Choose Us section
 
 ## Technical Notes
-- Using `aspect-square` forces a 1:1 width-to-height ratio, which on mobile can create boxes wider than the viewport
-- Adding `overflow-x-hidden` at the body level is a safety net but the root cause should still be fixed
-- The `md:aspect-square` breakpoint means the square will only apply at 768px and above
+- `min-w-0` on flex/grid children overrides the default `min-width: auto` behavior, allowing content to shrink properly
+- Multiple layers of `overflow-hidden` ensure that even if one layer fails, others catch the overflow
+- Adding `w-full max-w-full` explicitly sets maximum width constraints that work with the carousel's percentage-based sizing
 
