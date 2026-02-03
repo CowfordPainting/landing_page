@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Phone, Mail, CheckCircle2, Paintbrush, Home, Wrench } from "lucide-react";
+import { Phone, Mail, Paintbrush } from "lucide-react";
 import { MobileServicesSwiper } from "@/components/MobileServicesSwiper";
 import { StickyHeader } from "@/components/StickyHeader";
+import { WhyChooseUsCarousel } from "@/components/WhyChooseUsCarousel";
 import cowfordLogo from "@/assets/cowford-logo.svg";
 import interiorPainting from "@/assets/interior-painting.jpg";
 import exteriorPainting from "@/assets/exterior-painting.jpg";
@@ -162,14 +163,7 @@ const Index = () => {
               <p className="mb-6 text-lg text-primary">
                 We take pride in delivering flawless results with a personal touch. Our commitment to excellence goes far beyond the brush.
               </p>
-              <ul className="space-y-4">
-                {whyChooseUs.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <WhyChooseUsCarousel items={whyChooseUs} />
             </div>
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 via-accent/20 to-primary/10 p-8 flex items-center justify-center">
