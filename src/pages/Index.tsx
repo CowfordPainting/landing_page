@@ -101,7 +101,7 @@ const Index = () => {
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl text-primary">Our Services</h2>
             <p className="text-lg text-white max-w-2xl mx-auto">
-              From meticulous prep work to clean, professional finishes—we ensure every detail reflects our dedication to quality.
+              From meticulous prep work to clean, professional finishes, we ensure every detail reflects our dedication to quality.
             </p>
           </div>
           
