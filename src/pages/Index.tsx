@@ -57,7 +57,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <StickyHeader />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/30 to-background min-h-screen md:min-h-0">
@@ -165,8 +165,8 @@ const Index = () => {
               </p>
               <WhyChooseUsCarousel items={whyChooseUs} />
             </div>
-            <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 via-accent/20 to-primary/10 p-6 md:p-8 flex items-center justify-center">
+            <div className="relative overflow-hidden">
+              <div className="py-12 md:aspect-square rounded-2xl bg-gradient-to-br from-primary/20 via-accent/20 to-primary/10 p-6 md:p-8 flex items-center justify-center w-full max-w-full">
                 <div className="text-center">
                   <Paintbrush className="mx-auto h-16 w-16 md:h-24 md:w-24 text-primary mb-4 md:mb-6" />
                   <p className="text-xl md:text-2xl font-semibold mb-2">Professional Excellence</p>
