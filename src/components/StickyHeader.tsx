@@ -33,13 +33,13 @@ export const StickyHeader = () => {
           </div>
           <div className="flex gap-3">
             <Button size="default" asChild>
-              <a href="tel:904-236-9511">
+              <a href="tel:904-300-0365">
                 <Phone className="mr-2 h-4 w-4" />
-                904-236-9511
+                904-300-0365
               </a>
             </Button>
             <Button size="default" variant="outline" asChild>
-              <a href="mailto:Cowfordpainting@gmail.com">
+              <a href="mailto:quotes@cowfordpainting.com">
                 <Mail className="mr-2 h-4 w-4" />
                 Get a Quote
               </a>

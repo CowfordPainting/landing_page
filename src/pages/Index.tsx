@@ -79,13 +79,13 @@ const Index = () => {
             </p>
             <div className="hidden md:flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700">
               <Button size="lg" className="text-lg" asChild>
-                <a href="tel:904-236-9511">
+                <a href="tel:904-300-0365">
                   <Phone className="mr-2 h-5 w-5" />
-                  904-236-9511
+                  904-300-0365
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="text-lg" asChild>
-                <a href="mailto:Cowfordpainting@gmail.com">
+                <a href="mailto:quotes@cowfordpainting.com">
                   <Mail className="mr-2 h-5 w-5" />
                   Get a Quote
                 </a>
@@ -196,27 +196,27 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
               <a 
-                href="tel:904-236-9511" 
+                href="tel:904-300-0365" 
                 className="flex items-center gap-2 text-lg font-semibold hover:text-primary transition-colors"
               >
                 <Phone className="h-5 w-5 text-primary" />
-                904-236-9511
+                904-300-0365
               </a>
               <span className="hidden sm:inline text-muted-foreground">|</span>
               <a 
-                href="mailto:Cowfordpainting@gmail.com" 
+                href="mailto:quotes@cowfordpainting.com" 
                 className="flex items-center gap-2 text-lg font-semibold hover:text-primary transition-colors"
               >
                 <Mail className="h-5 w-5 text-primary" />
-                Cowfordpainting@gmail.com
+                quotes@cowfordpainting.com
               </a>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg" asChild>
-                <a href="tel:904-236-9511">Call Now</a>
+                <a href="tel:904-300-0365">Call Now</a>
               </Button>
               <Button size="lg" variant="outline" className="text-lg" asChild>
-                <a href="mailto:Cowfordpainting@gmail.com">Email Us</a>
+                <a href="mailto:quotes@cowfordpainting.com">Email Us</a>
               </Button>
             </div>
           </div>
@@ -227,13 +227,13 @@ const Index = () => {
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-card border-t shadow-lg">
         <div className="grid grid-cols-2 gap-0">
           <Button size="lg" className="rounded-none h-14 w-full" asChild>
-            <a href="tel:904-236-9511">
+            <a href="tel:904-300-0365">
               <Phone className="mr-2 h-5 w-5" />
               Call
             </a>
           </Button>
           <Button size="lg" className="rounded-none h-14 w-full border-l bg-black text-white hover:bg-black/90" asChild>
-            <a href="mailto:Cowfordpainting@gmail.com">
+            <a href="mailto:quotes@cowfordpainting.com">
               <Mail className="mr-2 h-5 w-5" />
               Email
             </a>
